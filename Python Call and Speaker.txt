@@ -9,14 +9,14 @@ recipients = [
     {
         'account_sid': 'AC1c35d0ac4f9e5427975422f365b3ade9',
         'auth_token': '03f2e4dc009f5a1b5e2725527ae47a93',
-        'twilio_number': '+158562025231',
-        'recipient_number': '+918917417197'
+        'twilio_number': '+(give the number u got provided)',
+        'recipient_number': '+(any number u want to receive the call from)'
     },
     {
         'account_sid': 'AC0447a88d6b27d70603c8a4b13a81574b',
         'auth_token': 'ad31ea66db6257c1c3ba65788df7a03b',
-        'twilio_number': '+12233578003',
-        'recipient_number': '+917684880496'
+        'twilio_number': '+(give the number u got provided)',
+        'recipient_number': '+(any number u want to receive the call from)'
     },
     # Add more accounts below as needed
 ]
@@ -37,7 +37,7 @@ def notify_recipient(r):
     client = Client(r['account_sid'], r['auth_token'])
     # Place call
     call = client.calls.create(
-        twiml='<Response><Say>Piush you are a dirty mother fucker</Say></Response>',
+        twiml='<Response><Say> you are dirty</Say></Response>',
         from_=r['twilio_number'],
         to=r['recipient_number']
     )
